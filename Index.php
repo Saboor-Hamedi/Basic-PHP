@@ -57,17 +57,28 @@ echo "where are you goin: $going <br>";
     <?php 
       // declare array 
     echo "List of our information <br>";
-      $myArray = array('saboor','hamedi', true, 1, 'Hello');
-     echo $myArray [0]. "<br>";
-     echo $myArray [1]. "<br>";
-     echo $myArray [2]. "<br>";
-     echo $myArray [3]. "<br>";
-     echo $myArray [4]. "<br>";
-
-
-     ?>
-
-
+$myArray = array('saboor','hamedi', true, 1, 'Hello');
+echo $myArray [0]. "<br>";
+echo $myArray [1]. "<br>";
+echo $myArray [2]. "<br>";
+echo $myArray [3]. "<br>";
+echo $myArray [4]. "<br>";
+if($myArray[2] == true){
+echo "I'm true";
+}else {
+echo "I'm not true";
+}
+echo "<br>This is the length of my name Saboor: ";
+echo strlen ($myArray[0]);
+echo "<br> to uppercase ";
+echo strtoupper("(... $myArray[0] ...)");
+// lets modify one value
+echo "<br>";
+echo  $myArray [1] = 'Abdul Saboor, im updated<br>';
+// store different data type
+echo $myArray [2] = 'At the top im a boolean number 1 ';
+//you can play with the code 
+?>
     
   </body>
 </html>
