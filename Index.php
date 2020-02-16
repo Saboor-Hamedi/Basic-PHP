@@ -1,5 +1,8 @@
-<!-- print text on the screen with form  -->
+<!-- print text on the screen with form,   -->
 <?php
+$name  = "";
+$food = "";
+$going = "";
 $name = $_POST['name'];
 $food = $_POST['food'];
 $going = $_POST['going'];
@@ -8,9 +11,7 @@ echo "This is $name <br>";
 echo "i like this $food <br>";
 echo "where are you goin: $going <br>";
 }
-
 ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -18,20 +19,55 @@ echo "where are you goin: $going <br>";
     <title>PHP LEARNING</title>
   </head>
   <body>
-
-
-     <form action="Index.php" method="post">
-       Name:<input type="text" name="name">
-       <br>
-       Food: <input type="text" name="food">
+    <form action="Index.php" method="post">
+      Name:<input type="text" name="name">
       <br>
-        Going: <input type="text" name="going">
-
+      Food: <input type="text" name="food">
+      <br>
+      Going: <input type="text" name="going">
       <br>
       <button name="btn1">Click me</button>
-     </form>
-     <hr>
-  
+    </form>
+    <hr>
+    
+    <!-- next section  url-->
+    <!-- difference between post and get, in one word,
+    use post which is more secure, by using post no one can see your usernane nor password.
+    -->
+    <!-- try to change post into get and see the result  -->
+    <?php
+    if (isset($_POST['passbtn'])) {
+  $pass = $_POST['pass'];
+    $mes = "Your pass: $pass";
+    }else{
+        
+    }
+    ?>
+    <form action="Index.php" method="POST">
+      <input type="password" name="pass">
+      <br>
+      <span> <?php echo $mes;?></span>
+      <br>
+      <button name="passbtn">
+      pass
+      </button>
+    </form>
+    
+    <!-- section three array -->
+    <?php 
+      // declare array 
+    echo "List of our information <br>";
+      $myArray = array('saboor','hamedi', true, 1, 'Hello');
+     echo $myArray [0]. "<br>";
+     echo $myArray [1]. "<br>";
+     echo $myArray [2]. "<br>";
+     echo $myArray [3]. "<br>";
+     echo $myArray [4]. "<br>";
 
+
+     ?>
+
+
+    
   </body>
 </html>
